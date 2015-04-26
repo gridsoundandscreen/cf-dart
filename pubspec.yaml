@@ -1,0 +1,6 @@
+name: cf_dart
+dependencies:
+  browser: any
+transformers:
+  - $dart2js:
+      commandLineOptions: [--sourceMaps=true]
