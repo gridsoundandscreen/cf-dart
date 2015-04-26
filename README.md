@@ -7,3 +7,7 @@ Quick exmaple project to show how to run Dart (with source maps) on the CommandF
 2. `./build.sh`
 3. Start your favorite webserver in ./build/web
 4. Try debugging the GUI!
+
+## Screenshot
+
+![screenshot](https://raw.githubusercontent.com/gridsoundandscreen/cf-dart/master/screenshot.png)
