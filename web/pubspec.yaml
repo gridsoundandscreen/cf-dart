@@ -1,4 +1,4 @@
-name: cf_dart
+name: cf_gui
 dependencies:
   browser: any
   test: any
