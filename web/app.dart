@@ -1,7 +1,7 @@
 import "dart:js";
 import "dart:async";
 
-main() {
+main() async {
 
   Future<String> getJoin(String join) {
     Completer c = new Completer();
