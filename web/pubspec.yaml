@@ -2,6 +2,8 @@ name: cf_gui
 dependencies:
   browser: any
   test: any
+  cf_dart:
+    git: git://github.com/gridsoundandscreen/cf-dart.git
 transformers:
   - $dart2js:
       commandLineOptions: [--sourceMaps=true]

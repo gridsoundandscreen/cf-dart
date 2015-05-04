@@ -9,6 +9,8 @@ function inlineDartSourceMap(inputFilePath, buildPath, mapPath) {
 
     for (var sourceIdx = 0; sourceIdx < sources.length; sourceIdx ++) {
       var path = sources[sourceIdx];
+      var relativeDirRegex = /\.\.\//g;
+      path = path.replace(relativeDirRegex, '');
 
       var file = fs.readFileSync(buildPath + path).toString();
       sourcesContent[sourceIdx] = file;
