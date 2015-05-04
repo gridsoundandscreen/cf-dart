@@ -1,8 +1,9 @@
-import 'dart:js';
-import 'dart:async';
+part of cf_dart;
 
 class CF {
   JsObject _CF;
+  dynamic _userMain;
+  JsFunction _watch;
   JsFunction _getJoin;
   JsFunction _getJoins;
   JsFunction _setJoin;
@@ -16,6 +17,7 @@ class CF {
 
   CF() {
     _CF = context['CF'];
+    _userMain = _CF['userMain'];
     _getJoin = _CF['getJoin'];
     _getJoins = _CF['getJoins'];
     _setJoin = _CF['setJoin'];
@@ -26,6 +28,18 @@ class CF {
     _removeTag = _CF['removeTag'];
     _getProperties = _CF['getProperties'];
     _setProperties = _CF['setProperties'];
+  }
+
+  Future get userMain async {
+    Completer c = new Completer();
+
+    var callbackFunc = () {
+      c.complete();
+    };
+
+    _userMain = callbackFunc;
+
+    return c.future;
   }
 
   Future<Join> getJoin(String join) async {

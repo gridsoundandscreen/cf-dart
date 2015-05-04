@@ -214,7 +214,7 @@ void main() {
 
   group('setMultipleJoinProperties', () {
     test('should call getProperties with the correct arguments', () async {
-      
+
     });
   });
 }

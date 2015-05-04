@@ -20,8 +20,6 @@ function inlineDartSourceMap(inputFilePath, buildPath, mapPath) {
 
     var sourceMapPrefix = '//# sourceMappingURL=data:application/json;base64,';
 
-
-
     fs.readFile(inputFilePath, function(err, data) {
       if (err) throw err;
       var inlineSourceMap = sourceMapPrefix + Buffer(JSON.stringify(sourceMapObject)).toString('base64');

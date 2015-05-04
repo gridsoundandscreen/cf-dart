@@ -1,4 +1,4 @@
-import "package:cf_d"
+import 'package:cf_dart/cf_dart.dart';
 
 main() async {
 
